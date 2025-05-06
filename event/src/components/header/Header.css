@@ -1,0 +1,8 @@
+header{
+    background-color: #B51D44;
+
+    height: 75px;
+
+    /* borda */
+    box-shadow: 1px 4px 4px 0px #00000055;
+}

@@ -1,0 +1,78 @@
+/* a mae de todos */
+.main_login{
+    display: flex;
+    height: 100vh;
+}
+
+
+/*form de login da esquerda */
+.Banner{
+    background-image: url("../../assets/img/undraw_login_re_4vu2\ 1.png");
+    flex: 1;
+    background-color: #B51D44;
+    /*modificar algumas caracteristicas ds imagem */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*form de login da direita */
+.section_login{
+    flex: 1;
+    background-color: white;
+
+    /*centralizar o campo: */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .section_login img{
+    width: 290px;
+} */
+
+.form_login{
+    color: white;
+
+    width: 70%;
+    height: 50%;
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.form_login h1{
+    text-transform: uppercase;
+}
+
+.campos_login{
+    width: 70%;
+}
+
+.campo_input{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+p{
+    color: rgb(91, 87, 87);
+}
+
+.campo_input input{
+    border: 0;
+    border-bottom: 2px solid rgb(91, 90, 90);
+}
+
+@media screen and (max-width: 768px){
+    /* 0px -> 768px */
+    .Banner{
+        display: none;
+    }
+}
