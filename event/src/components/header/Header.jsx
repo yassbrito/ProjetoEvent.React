@@ -1,6 +1,6 @@
 import "./Header.css";
-import Logo from "../../assets/img/logo1.svg";
-import Adm from "../../assets/img/Vector.png";
+import Logo from "../../assets/img/Banner.svg";
+import Adm from "../../assets/img/Excluir.png";
 
 const Header = () => {
     return(
