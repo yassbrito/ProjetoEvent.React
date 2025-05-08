@@ -16,7 +16,7 @@ const Lista = (props) => {
                         <tr className="table_cabecalho">
 
                             <th style={{display:props.visibilidade}}>Titulo</th>
-                            <th style={{display:props.visil}} id="tipoEvento">tipoEevento</th>
+                            <th style={{display:props.visil}} id="tipoEvento">tipoEvento</th>
                             <th>Editar</th>
                             <th>Deletar</th>
                         </tr>
