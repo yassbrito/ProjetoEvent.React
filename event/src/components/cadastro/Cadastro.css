@@ -23,17 +23,18 @@
 
 .section_cadastro{
 
-    color: white;
-    /* padding: 46px 0; */
-
     display: flex;
+    
+    place-items: center;
+    color: white;
+    padding: 0 30px 30px 30px;
+
     flex: 1;
     align-items: center;
+    
+    height: 530px;
+    
     justify-content: center;
-    flex-direction: row;
-
-    height: 700px;
-
 }
 
 .banner_cadastro {
@@ -49,20 +50,20 @@
 }
 
 .banner_cadastro img{
-    /* width: 450px; */
+     width: 450px;
     height: 350px;
 }
 
 .form_cadastro{
     width: 100;
     height: 50%;
-    
+
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* margin-top: 120px; */
+    margin-top: 120px;
 
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .campo_cad_titulo input, .campo_cad_titulo select, .campo_cad_titulo textarea{
@@ -95,4 +96,4 @@ select{
 .campos_cadastro{
     padding-inline-start: 50px;
     
-}
+} 

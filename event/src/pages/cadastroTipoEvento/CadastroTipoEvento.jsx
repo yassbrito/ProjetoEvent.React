@@ -39,7 +39,7 @@ const CadastroTipoEvento = (props) => {
         if (TipoEvento.trim() != "") {
 
             try {
-                const cadastro = await api.post("TiposEventos", { tituloTipoEvento: TipoEvento });
+                await api.post("TiposEventos", { tituloTipoEvento: TipoEvento });
 
                 // alert("success", "Sucesso! Cadastro realizado com sucesso!");
 
@@ -124,17 +124,18 @@ const CadastroTipoEvento = (props) => {
     return (
         <>
             <Header />
-            <main>
+            
                 <Cadastro
                     tituloh1="Cadastro Tipo de Eventos"
                     Banner={Banner}
                     placeholder="Eventos"
                     visibilidade="none"
                     funcCadastro={cadastrarTipoEvento}
-
+                
 
                     valorInput={TipoEvento}
                     setValorInput={setTipoEvento}
+                    // visibilidadecad="none"
 
                 />
                 <Lista
@@ -144,11 +145,12 @@ const CadastroTipoEvento = (props) => {
 
                     lista={listaTipoEvento}
                     tipoLista="tiposEventos"
+                    Titulolista="Lista de Tipo Eventos"
 
                     funcExcluir={deletarTipoEvento}
                     funcEditar={editarTipoEvento}
                 />
-            </main>
+    
             <Footer />
         </>
     )

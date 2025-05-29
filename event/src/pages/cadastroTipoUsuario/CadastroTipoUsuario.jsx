@@ -132,9 +132,11 @@ const CadastroTipoUsuario = (props) => {
                 nomes="Título"
                 visibilidade="none"
                 funcCadastro={cadastrarTipoUsuario}
+                
 
                 valorInput={TipoUsuario}
                 setValorInput={setTipoUsuario}
+                visibilidadecad="none"
 
             />
             <Lista
@@ -143,6 +145,8 @@ const CadastroTipoUsuario = (props) => {
                 visi="none"
                 visibi="none"
                 visil="none"
+
+                Titulolista="Lista Tipo de Usuarios"
 
                 tipoLista="TiposUsuarios"
                 lista={listaTipoUsuario}
