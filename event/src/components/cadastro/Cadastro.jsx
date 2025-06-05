@@ -13,7 +13,7 @@ const Cadastro = (props) => {
 
             <section className="section_cadastro">
                 <div className="banner_cadastro">
-                    <img src={props.Banner} alt="Fundo banner do cadastro eventos" />
+                    <img src={props.img_banner} alt="Fundo banner do cadastro eventos" />
                 </div>
 
                 <form action="" className="layout_grid form_cadastro"
@@ -65,13 +65,13 @@ const Cadastro = (props) => {
 
 
                                 <div className="campo_cad_titulo" >
-                                <select name="" id=""
+                                {/* <select name="" id=""
                                     style={{ display: props.Inst }}
                                     value={props.valorSelect2}
                                     onChange={(e) => props.setValorSelect2(e.target.value)}
                                 >
                                     <option selected value="">Senai</option>
-                                </select>
+                                </select> */}
                                 <textarea name="" id="" placeholder="Descrição" className="descricao"
                                     style={{ display: props.desc }}
                                     value={props.valorText}

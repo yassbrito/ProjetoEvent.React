@@ -1,6 +1,55 @@
 import { useEffect, useState } from "react";
 
+import ImgDeletar from "../../assets/img/lixeira.png";
+
+import api from "../../Services/services";
+
+import "./Modal.css";
+
 const Modal = (props) => {
+
+    const [comentarios, setComentarios] = useState([]);
+
+    const [novoComentario, setNovoComentario] = useState("");
+
+    async function listarComentarios(){
+        try {
+           const resposta = await api.get(`ComentariosEventos/ListarSomenteExibe?id=${props.idEvento}`);
+
+            setComentarios(resposta.data);
+
+            console.log(resposta.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+useEffect(() => {
+    listarComentarios();
+})
+
+    async function cadastrarComentario(){
+        try {
+            await api.post("ComentariosEventos",{
+                idUsuario: usuarioId,
+                idEvento: props.idEvento,
+                Descricao: comentarios})
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+
+    async function deletarComentario(idComentario){
+        try {
+            await api.delete(`ComentariosEventos/${idComentario}`);
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+
+
     return(
         <>
         <div className="model-overlay" onClick={props.fecharModel}></div>
@@ -14,15 +63,18 @@ const Modal = (props) => {
                     {comentarios.map((item) => (
                         <div key={item.idComentarioEvento}>
                             <strong>{item.usuario.nomeUsuario}</strong>
-                            <img src={ImgDeletar} alt="Deletar" />
+                            <img src={ImgDeletar} alt="Deletar" 
+                            onClick={() => deletarComentario(item.idComentarioEvento)}/>
                             <p>{item.descricao}</p>
                             <hr/>
 
                         </div>
                     ))}
                     <div>
-                        <input type="text" placeholder="Escreva seu comentario..."/>
-                        <button>
+                        <input type="text" placeholder="Escreva seu comentario..."
+                        value={novoComentario}
+                        onChange={(e) => setNovoComentario(e.target.value)} />
+                        <button onClick={() => cadastrarComentario(novoComentario)}>
                             cadastrar
                         </button>
                     </div>
