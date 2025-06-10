@@ -127,13 +127,14 @@ const CadastroDeEventos = () => {
                     const campo2 = document.getElementById("campo2").value;
                     const campo3 = document.getElementById("campo3").value;
                     const campo4 = document.getElementById("campo4").value;
+                    const campo5 = document.getElementById("campo5").value;
 
-                    if (!campo1 || !campo2 || !campo3 || !campo4) {
+                    if (!campo1 || !campo2 || !campo3 || !campo4 || !campo5) {
                         Swal.showValidationMessage("Preencha todos os campos.");
                         return false;
                     }
 
-                    return { campo1, campo2, campo3, campo4 };
+                    return { campo1, campo2, campo3, campo4, campo5 };
                 }
             });
 
@@ -148,7 +149,8 @@ const CadastroDeEventos = () => {
                 nomeEvento: value.campo1,
                 dataEvento: value.campo2,
                 idTipoEvento: value.campo3,
-                descricao: value.campo4,
+                instituicao: value.campo4,
+                descricao: value.campo5,
             });
 
             console.log("Evento atualizado com sucesso!");
@@ -175,8 +177,8 @@ const CadastroDeEventos = () => {
             <Header />
 
             <Cadastro
+                tituloh1 ="Cadastro Evento"
                 img_banner={banner_cadastroEvento}
-                titulo_cadastro="Cadastro de Evento"
                 nomes="Nome"
                 funcCadastro={cadastrarEvento}
                 valorInput={evento}
