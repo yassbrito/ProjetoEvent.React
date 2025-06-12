@@ -128,7 +128,7 @@ const CadastroTipoUsuario = (props) => {
             <Header />
             <Cadastro
                 tituloh1="Cadastro Tipo de Usuário"
-                Banner={Banner}
+                img_banner={Banner}
                 nomes="Título"
                 visibilidade="none"
                 funcCadastro={cadastrarTipoUsuario}

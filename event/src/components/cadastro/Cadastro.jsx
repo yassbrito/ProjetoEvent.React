@@ -59,7 +59,7 @@ const Cadastro = (props) => {
                             </div>`
 
                             <select nome="Instituicao" id="">
-                                <option value="" disabled selected>Instituicao</option>
+                                <option value="" disabled selected>Instituição</option>
                                 <option value="E47E2F25-8E58-4E48-983B-36281FA6BA37">Senai</option>
                             </select>
 

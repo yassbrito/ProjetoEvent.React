@@ -127,7 +127,7 @@ const CadastroTipoEvento = (props) => {
             
                 <Cadastro
                     tituloh1="Cadastro Tipo de Eventos"
-                    Banner={Banner}
+                    img_banner={Banner}
                     placeholder="Eventos"
                     visibilidade="none"
                     funcCadastro={cadastrarTipoEvento}

@@ -65,3 +65,13 @@ input:checked+.slider::before {
     transform: translateY(-50%) translateX(26px);
 }
 
+.tabela_lista_eventos{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
